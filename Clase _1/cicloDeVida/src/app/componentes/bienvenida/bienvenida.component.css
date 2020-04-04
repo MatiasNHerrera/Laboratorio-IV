@@ -1,0 +1,38 @@
+.middle
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.estilo
+{
+    position: relative;
+    display: block;
+    color: black;
+    border: 2px solid pink;
+    padding: 17px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.estilo::before
+{
+    color: black;
+    content: "";
+    background-color: pink;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    transition:0.6s ;
+}
+
+.estilo:hover::before
+{
+    height: 100%;
+}
